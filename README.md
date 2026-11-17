@@ -136,6 +136,14 @@ Também foram explorados novos recursos e tecnologias:
 - Uso de threads e filas para executar tarefas sem bloquear a interface.
 - Tratamento de erros e criação de cópias de segurança dos dados.
 
+## 🗂️ Histórico de versões
+
+O desenvolvimento do CineTracker também está documentado em snapshots das versões anteriores, da V1 à V5. Cada etapa possui seu próprio README com funcionalidades, tecnologias e instruções de execução.
+
+[Ver histórico de desenvolvimento](archive/README.md)
+
+A versão atual e definitiva permanece na raiz deste repositório.
+
 ## 🎓 Projeto acadêmico
 
 Desenvolvido para a disciplina de Algoritmos e Programação.
