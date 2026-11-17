@@ -99,19 +99,21 @@ Esses arquivos são criados ou utilizados pelo programa durante sua execução. 
 
 ## 📸 Capturas de tela
 
-As imagens abaixo demonstram as principais áreas da aplicação.
+### Tela inicial — Biblioteca
 
-> Adicionar imagens reais do programa nesta seção antes da publicação.
+![Tela inicial do CineTracker](screenshots/inicio.png)
 
-Sugestão de organização:
+### Busca de filmes
 
-```text
-screenshots/
-├── inicio.png
-├── busca.png
-├── biblioteca.png
-└── estatisticas.png
-```
+![Busca de filmes](screenshots/buscar.png)
+
+### Estatísticas
+
+![Painel de estatísticas](screenshots/estatisticas.png)
+
+### Detalhes do filme e sinopse
+
+![Biblioteca com sinopse do filme](screenshots/biblioteca-sinopse.png)
 
 ## 📚 Conhecimentos aplicados e adquiridos
 
