@@ -1,0 +1,7 @@
+# Dependências externas do CineTracker.
+# Testado com Python 3.9, 3.11 e 3.12.
+# O Tkinter já vem com o Python na maioria das instalações (no Linux: sudo apt install python3-tk).
+customtkinter>=5.2.2,<7
+requests>=2.31,<3
+Pillow>=10.0.1,<14
+matplotlib>=3.8,<4
