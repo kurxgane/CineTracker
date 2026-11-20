@@ -10,6 +10,16 @@ O CineTracker surgiu da ideia de criar uma ferramenta simples para organizar o c
 
 Em vez de depender de anotações ou listas espalhadas, o usuário pode pesquisar títulos, adicioná-los à própria biblioteca, acompanhar seu progresso e visualizar estatísticas sobre seus hábitos cinematográficos.
 
+## 📦 Download
+
+A versão **v1.0.0** está disponível na página de Releases do GitHub:
+
+**[Baixar CineTracker v1.0.0](https://github.com/kurxgane/CineTracker/releases/latest)**
+
+O pacote disponibilizado é o código-fonte do projeto (`CineTracker-v1.0.0-source.zip`), não um instalador executável (.exe). Para executar o programa, extraia o ZIP e siga as instruções do README incluído no pacote.
+
+Se preferir, você também pode clonar o repositório e executar o projeto seguindo as instruções abaixo.
+
 ## ✨ Funcionalidades
 
 - **Busca de filmes:** pesquisa de títulos por meio da API OMDb.
@@ -149,20 +159,6 @@ Esses arquivos são criados ou utilizados pelo programa durante sua execução. 
 ### Detalhes do filme e sinopse
 
 ![Biblioteca com sinopse do filme](screenshots/biblioteca-sinopse.png)
-
-## 🗂️ Estrutura do projeto
-
-```text
-CineTracker/
-├── dashboard.py            # aplicação principal
-├── requirements.txt        # dependências externas
-├── config.example.json     # modelo de configuração sem credenciais
-├── config.json             # configuração local (não publicada)
-├── .gitignore              # arquivos locais e sensíveis ignorados pelo Git
-├── README.md
-├── screenshots/            # capturas de tela da versão atual
-└── archive/                 # versões anteriores (V1 a V5)
-```
 
 ## 🗂️ Estrutura do projeto
 
