@@ -35,13 +35,13 @@ Em vez de depender de anotações ou listas espalhadas, o usuário pode pesquisa
 
 ## ⚙️ Instalação
 
-### 1. Requisitos
+### Requisitos
 
 - Python 3.9 ou superior.
 - Conexão com a internet.
-- Uma chave de API da OMDb.
+- Uma chave de API da OMDb (obrigatória para pesquisar filmes).
 
-### 2. Baixar o projeto
+### Baixar o projeto
 
 Clone o repositório:
 
@@ -50,32 +50,67 @@ git clone https://github.com/kurxgane/CineTracker.git
 cd CineTracker
 ```
 
-### 3. Instalar as dependências
+### Instalar as dependências
+
+É recomendado criar um ambiente virtual:
 
 ```bash
-pip install -r requirements.txt
+python -m venv .venv
 ```
+
+No Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+No Linux ou macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+Instale as dependências externas:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+O arquivo `requirements.txt` reúne as bibliotecas externas do projeto. Elas são instaladas pelo `pip`. Módulos como `json`, `os`, `threading` e `queue` fazem parte da biblioteca padrão do Python. O Tkinter normalmente acompanha o Python; em algumas distribuições Linux, pode ser necessário instalar `python3-tk`.
 
 ## 🔑 Configuração das APIs
 
-O CineTracker utiliza a OMDb como fonte principal dos dados. A integração com a TMDb é opcional.
+A OMDb é a fonte principal dos dados e precisa ser configurada para que a pesquisa funcione. A TMDb é um complemento opcional para títulos e sinopses em português.
 
-### OMDb (necessária)
+### OMDb (obrigatória)
 
 1. Acesse https://www.omdbapi.com/apikey.aspx.
-2. Solicite uma chave de API.
-3. Copie o arquivo `config.example.json` e renomeie a cópia para `config.json`.
-4. Abra o arquivo e preencha o campo `omdb_api_key` com sua chave.
+2. Solicite uma chave gratuita e ative-a pelo link enviado ao seu e-mail.
+3. Copie `config.example.json` e renomeie a cópia para `config.json`.
+4. Preencha `omdb_api_key` com sua chave.
 
 ### TMDb (opcional)
 
-Para obter títulos e sinopses em português, é possível configurar também um token de leitura da TMDb.
+1. Crie uma conta em https://www.themoviedb.org.
+2. Acesse Configurações → API e copie o Token de Acesso de Leitura da API.
+3. Preencha `tmdb_read_access_token` no `config.json`.
 
-Preencha o campo `tmdb_read_access_token` no `config.json`.
+Os campos `nome_aluno` e `curso_aluno` são opcionais e, quando preenchidos, aparecem no cabeçalho.
 
-Sem essa configuração, o programa continua funcionando normalmente utilizando os dados da OMDb.
+Exemplo de `config.json`:
 
-**Importante:** o arquivo `config.json` contém credenciais pessoais e não deve ser enviado ao GitHub.
+```json
+{
+  "omdb_api_key": "SUA_CHAVE_OMDB",
+  "tmdb_read_access_token": "SEU_TOKEN_TMDB",
+  "nome_aluno": "",
+  "curso_aluno": ""
+}
+```
+
+Também é possível usar as variáveis de ambiente `OMDB_API_KEY` e `TMDB_READ_ACCESS_TOKEN`. Quando definidas, elas têm prioridade sobre os valores do arquivo.
+
+**Segurança:** `config.json` contém credenciais pessoais e é ignorado pelo Git. Nunca publique esse arquivo nem inclua chaves ou tokens no código. O aplicativo abre mesmo sem a chave da OMDb, mas a pesquisa só funciona depois da configuração.
 
 ## ▶️ Como executar
 
@@ -114,6 +149,20 @@ Esses arquivos são criados ou utilizados pelo programa durante sua execução. 
 ### Detalhes do filme e sinopse
 
 ![Biblioteca com sinopse do filme](screenshots/biblioteca-sinopse.png)
+
+## 🗂️ Estrutura do projeto
+
+```text
+CineTracker/
+├── dashboard.py            # aplicação principal
+├── requirements.txt        # dependências externas
+├── config.example.json     # modelo de configuração sem credenciais
+├── config.json             # configuração local (não publicada)
+├── .gitignore              # arquivos locais e sensíveis ignorados pelo Git
+├── README.md
+├── screenshots/            # capturas de tela da versão atual
+└── archive/                 # versões anteriores (V1 a V5)
+```
 
 ## 🗂️ Estrutura do projeto
 
