@@ -229,3 +229,12 @@ cache/
 !.env.example
 python-portatil/
 libs_backup/
+# CineTracker: credenciais e arquivos temporários locais
+config.json
+config.json.tmp
+biblioteca.json.bak
+biblioteca.json.tmp
+biblioteca.json.corrompido-*
+cache_tmdb.json
+cache_tmdb.json.tmp
+libs/

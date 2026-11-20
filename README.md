@@ -115,6 +115,20 @@ Esses arquivos são criados ou utilizados pelo programa durante sua execução. 
 
 ![Biblioteca com sinopse do filme](screenshots/biblioteca-sinopse.png)
 
+## 🗂️ Estrutura do projeto
+
+```text
+CineTracker/
+├── dashboard.py            # aplicação principal
+├── requirements.txt        # dependências externas
+├── config.example.json     # modelo de configuração sem credenciais
+├── config.json             # configuração local (não publicada)
+├── .gitignore              # arquivos locais e sensíveis ignorados pelo Git
+├── README.md
+├── screenshots/            # capturas de tela da versão atual
+└── archive/                 # versões anteriores (V1 a V5)
+```
+
 ## 📚 Conhecimentos aplicados e adquiridos
 
 Durante o desenvolvimento, foram aplicados conceitos estudados na disciplina, como:
